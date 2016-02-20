@@ -1,12 +1,19 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+angular.module('jpCvApp', [
+  'ui.router'
+])
+.config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/home');
+
+    //TODO: Define pages for site
+    $stateProvider
+        .state('home', {
+            url: '/home',
+            templateUrl: 'home/home.template.html'
+        })
+        .state('about', {
+            url: '/about',
+            templateUrl: 'about/about.template.html'
+        });
+});
