@@ -21,15 +21,11 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  <ul class="menu">
-    <li><a ui-sref="home">Home</a></li>
-    <li><a ui-sref="about">About</a></li>
-  </ul>
-
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
+  <!--TODO: See if this div needs a helper class like .contaier or .container-fluid-->
   <div ui-view></div>
 
   <!-- In production use:
